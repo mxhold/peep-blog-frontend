@@ -4,7 +4,7 @@
 <ul>
   {{#each post in model}}
   <li>
-    {{#link-to 'posts.post' post.id}}
+    {{#link-to 'posts.post' post}}
       {{post.title}}
     {{/link-to}}
   </li>

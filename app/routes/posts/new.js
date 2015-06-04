@@ -5,10 +5,10 @@ export default Ember.Route.extend({
     return this.store.createRecord('post');
   },
   actions: {
-    save: function(post) {
-      var _this = this;
-      post.save().then(function() {
-        _this.transitionTo('posts');
+    save: function() {
+      var post = this.currentModel;
+      post.save().then(() => {
+        this.transitionTo('posts');
       });
     }
   }
